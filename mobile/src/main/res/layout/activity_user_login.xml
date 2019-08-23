@@ -19,10 +19,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
-    android:alpha="0.9"
-    android:backgroundTintMode="screen"
+    android:background="@color/FFF"
     >
+    <com.xuexiang.xui.widget.actionbar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/FFF"
+        app:tb_barHeight="65dp"
+        app:tb_sideTextPadding="20dp"
+        app:tb_actionPadding="20dp"
+        app:tb_leftImageResource="@color/FFF"
+        app:tb_titleText="用户登陆" />
     <com.xuexiang.xui.widget.imageview.RadiusImageView
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -41,10 +48,11 @@
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        app:met_textColor="@color/FFF"
+        app:met_textColor="@color/C000"
         android:hint="请输入账号\\邮箱\\手机号"
         android:drawableLeft="@drawable/icon_user"
         android:textSize="18dp"
+        app:met_iconPadding="20dp"
         app:met_clearButton="true"/>
     <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
         android:id="@+id/input_password2"
@@ -54,13 +62,14 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
-        app:met_textColor="@color/FFF"
+        app:met_textColor="@color/C000"
         android:textSize="18dp"
         android:hint="请输入密码"
         android:drawableLeft="@drawable/icon_lock"
         android:inputType="textPassword"
         android:textAlignment="viewStart"
         app:met_isAsteriskStyle="true"
+        app:met_iconPadding="20dp"
         app:met_passWordButton="true"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,13 +79,15 @@
         android:layout_marginRight="30dp"
         android:orientation="horizontal">
         <TextView
+            android:id="@+id/register_but"
             android:layout_width="wrap_content"
             android:layout_weight="0.5"
             android:layout_height="30dp"
             android:gravity="left"
-            android:textColor="@color/FFF"
+            android:textColor="@color/C000"
             android:text="立即注册"/>
         <TextView
+            android:id="@+id/forget_password"
             android:layout_width="wrap_content"
             android:textColor="@color/app_color_theme_1"
             android:layout_weight="0.5"
@@ -84,21 +95,68 @@
             android:gravity="right"
             android:text="忘记密码？"/>
     </LinearLayout>
-    <com.xuexiang.xui.widget.button.roundbutton.RoundButton
-        style="@style/RoundButton.Auto"
+    <com.xuexiang.xui.widget.button.ButtonView
+        style="@style/ButtonView.Blue"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center"
+        android:layout_margin="20dp"
         android:textSize="18dp"
         android:textColor="@color/FFF"
-        android:text="登  陆" />
-    <TextView
+        android:text="登  陆"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_weight="0.5"
-        android:layout_height="20dp"
-        android:gravity="center"
-        android:textColor="@color/FFF"
-        android:text="第三方直接登陆"/>
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:textColor="@color/C000"
+            android:text="第三方直接登陆"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <com.xuexiang.xui.widget.imageview.RadiusImageView
+                android:clickable="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_qq"
+                app:riv_border_color="@color/C000"
+                app:riv_border_width="1px"
+                app:riv_is_circle="true"
+                app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                app:riv_selected_border_width="1px"/>
+            <com.xuexiang.xui.widget.imageview.RadiusImageView
+                android:clickable="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_wx"
+                app:riv_border_color="@color/C000"
+                app:riv_border_width="1px"
+                app:riv_is_circle="true"
+                app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                app:riv_selected_border_width="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <com.xuexiang.xui.widget.imageview.RadiusImageView
+                android:clickable="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_xiaomi"
+                app:riv_border_color="@color/C000"
+                app:riv_border_width="1px"
+                app:riv_is_circle="true"
+                app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                app:riv_selected_border_width="1px"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 </LinearLayout>

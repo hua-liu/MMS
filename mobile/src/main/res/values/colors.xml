@@ -76,4 +76,7 @@
     <color name="red_start">#EE3455</color>
     <color name="red_end">#FFaa89</color>
     <color name="FFF">#FFF</color>
+    <color name="c000">#000</color>
+    <color name="C555">#555</color>
+    <color name="C000">#000</color>
 </resources>
